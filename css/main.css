@@ -75,11 +75,18 @@ a {
 
 .container {
     width: 100%;
-    max-width: 620px;
     height: auto;
     margin: auto;
     position: relative;
     z-index: 10;
+    pointer-events: none;
+}
+
+.max-width {
+    max-width: 620px;
+    height: auto;
+    margin: auto;
+    pointer-events: auto;
     padding: 44px;
 }
 
@@ -120,7 +127,7 @@ a {
 
 .footer .social-media {
     display: block;
-    margin-bottom: 22px;
+    margin-bottom: 44px;
     font-size: 1.3em;
 }
 
@@ -139,10 +146,26 @@ a {
     margin-bottom: 22px;
 }
 
-.footer .copyright {
+.footer .copyright,
+.footer .credit {
+    display: block;
+    margin: auto;
     text-transform: uppercase;
     font-weight: 400;
+}
+
+.footer .copyright {
+    margin-bottom: 22px;
+    font-size: 0.7em;
+}
+
+.footer .credit {
+    opacity: 0.6;
     font-size: 0.6em;
+}
+
+.footer .credit a {
+    text-decoration: underline;
 }
 
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {}
